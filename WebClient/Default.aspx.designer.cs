@@ -24,22 +24,67 @@ namespace WebClient
         protected global::System.Web.UI.UpdatePanel UpdatePanel;
 
         /// <summary>
-        /// TextBoxX элемент управления.
+        /// ButtonMRA элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxX;
+        protected global::System.Web.UI.WebControls.Button ButtonMRA;
 
         /// <summary>
-        /// TextBoxY элемент управления.
+        /// ButtonARA элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxY;
+        protected global::System.Web.UI.WebControls.Button ButtonARA;
+
+        /// <summary>
+        /// TextBoxA элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxA;
+
+        /// <summary>
+        /// DropDownListOperation элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListOperation;
+
+        /// <summary>
+        /// ButtonMRB элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonMRB;
+
+        /// <summary>
+        /// ButtonARB элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonARB;
+
+        /// <summary>
+        /// TextBoxB элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxB;
 
         /// <summary>
         /// ButtonEquals элемент управления.
@@ -51,12 +96,30 @@ namespace WebClient
         protected global::System.Web.UI.WebControls.Button ButtonEquals;
 
         /// <summary>
-        /// LabelResult элемент управления.
+        /// ButtonMS элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически создаваемое поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelResult;
+        protected global::System.Web.UI.WebControls.Button ButtonMS;
+
+        /// <summary>
+        /// ButtonAS элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonAS;
+
+        /// <summary>
+        /// TextBoxResult элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически создаваемое поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxResult;
     }
 }

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://azvm.ru/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://azvm.ru/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Тестовый ASMX-сервис</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://azvm.ru/">
+      <s:element name="GetMemory">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMemoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMemoryResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMemory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="value" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetMemoryResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetApp">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAppResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAppResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetApp">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="value" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetAppResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Add">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="b" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Subtract">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="b" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SubtractResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SubtractResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Multiply">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="b" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MultiplyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MultiplyResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetMemorySoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemory" />
+  </wsdl:message>
+  <wsdl:message name="GetMemorySoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMemorySoapIn">
+    <wsdl:part name="parameters" element="tns:SetMemory" />
+  </wsdl:message>
+  <wsdl:message name="SetMemorySoapOut">
+    <wsdl:part name="parameters" element="tns:SetMemoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAppSoapIn">
+    <wsdl:part name="parameters" element="tns:GetApp" />
+  </wsdl:message>
+  <wsdl:message name="GetAppSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetAppSoapIn">
+    <wsdl:part name="parameters" element="tns:SetApp" />
+  </wsdl:message>
+  <wsdl:message name="SetAppSoapOut">
+    <wsdl:part name="parameters" element="tns:SetAppResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSoapIn">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="AddSoapOut">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="SubtractSoapIn">
+    <wsdl:part name="parameters" element="tns:Subtract" />
+  </wsdl:message>
+  <wsdl:message name="SubtractSoapOut">
+    <wsdl:part name="parameters" element="tns:SubtractResponse" />
+  </wsdl:message>
+  <wsdl:message name="MultiplySoapIn">
+    <wsdl:part name="parameters" element="tns:Multiply" />
+  </wsdl:message>
+  <wsdl:message name="MultiplySoapOut">
+    <wsdl:part name="parameters" element="tns:MultiplyResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TestServiceSoap">
+    <wsdl:operation name="GetMemory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Получить число, хранящееся в памяти</wsdl:documentation>
+      <wsdl:input message="tns:GetMemorySoapIn" />
+      <wsdl:output message="tns:GetMemorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMemory">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Сохранить число в память</wsdl:documentation>
+      <wsdl:input message="tns:SetMemorySoapIn" />
+      <wsdl:output message="tns:SetMemorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Получить число, хранящееся в словаре приложения</wsdl:documentation>
+      <wsdl:input message="tns:GetAppSoapIn" />
+      <wsdl:output message="tns:GetAppSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetApp">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Сохранить число в словарь приложения</wsdl:documentation>
+      <wsdl:input message="tns:SetAppSoapIn" />
+      <wsdl:output message="tns:SetAppSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Сложение двух чисел</wsdl:documentation>
+      <wsdl:input message="tns:AddSoapIn" />
+      <wsdl:output message="tns:AddSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Subtract">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Вычитание двух чисел</wsdl:documentation>
+      <wsdl:input message="tns:SubtractSoapIn" />
+      <wsdl:output message="tns:SubtractSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Multiply">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Умножение двух чисел</wsdl:documentation>
+      <wsdl:input message="tns:MultiplySoapIn" />
+      <wsdl:output message="tns:MultiplySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TestServiceSoap" type="tns:TestServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMemory">
+      <soap:operation soapAction="http://azvm.ru/GetMemory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMemory">
+      <soap:operation soapAction="http://azvm.ru/SetMemory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApp">
+      <soap:operation soapAction="http://azvm.ru/GetApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetApp">
+      <soap:operation soapAction="http://azvm.ru/SetApp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <soap:operation soapAction="http://azvm.ru/Add" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Subtract">
+      <soap:operation soapAction="http://azvm.ru/Subtract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiply">
+      <soap:operation soapAction="http://azvm.ru/Multiply" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TestServiceSoap12" type="tns:TestServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMemory">
+      <soap12:operation soapAction="http://azvm.ru/GetMemory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMemory">
+      <soap12:operation soapAction="http://azvm.ru/SetMemory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApp">
+      <soap12:operation soapAction="http://azvm.ru/GetApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetApp">
+      <soap12:operation soapAction="http://azvm.ru/SetApp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Add">
+      <soap12:operation soapAction="http://azvm.ru/Add" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Subtract">
+      <soap12:operation soapAction="http://azvm.ru/Subtract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiply">
+      <soap12:operation soapAction="http://azvm.ru/Multiply" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TestService">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Тестовый ASMX-сервис</wsdl:documentation>
+    <wsdl:port name="TestServiceSoap" binding="tns:TestServiceSoap">
+      <soap:address location="https://localhost:44300/TestService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TestServiceSoap12" binding="tns:TestServiceSoap12">
+      <soap12:address location="https://localhost:44300/TestService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

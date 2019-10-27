@@ -4,8 +4,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebClient", "WebClient\WebClient.csproj", "{F7F63BC4-87A1-45AE-BA9A-AE497A661283}"
+	ProjectSection(ProjectDependencies) = postProject
+		{81AD900B-7AC3-471C-AF75-666F6350DC7A} = {81AD900B-7AC3-471C-AF75-666F6350DC7A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopClient", "DesktopClient\DesktopClient.csproj", "{36722F5E-F2EE-4558-89B0-682273A5462A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{81AD900B-7AC3-471C-AF75-666F6350DC7A} = {81AD900B-7AC3-471C-AF75-666F6350DC7A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{81AD900B-7AC3-471C-AF75-666F6350DC7A}"
 EndProject
